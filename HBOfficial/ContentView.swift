@@ -9,8 +9,22 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView{
+            ScrollView{
+                
+                ScrollView(.horizontal){
+                HStack{
+                    ForEach(0..<20){ num in
+                        Text(num.description)
+                            .padding()
+                            .background(Color.red)
+                    
+                        }
+                    }
+                }
+                   
+            }.navigationTitle("Movies Carousel")
+        }
     }
 }
 
